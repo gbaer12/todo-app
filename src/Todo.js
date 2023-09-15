@@ -24,11 +24,15 @@ function Todo({ task = "default todo", id = "1", remove, update }) {
 
   //default todo view
   let jsx = (
-    <div>
-      <li>{task}</li>
-      <button onClick={toggleEdit}>Edit</button>
-      <button onClick={handleDelete}>X</button>
-    </div>
+    <>
+      <td>{task}</td>
+      <td>
+        <button onClick={toggleEdit}>Edit</button>
+      </td>
+      <td>
+        <button onClick={handleDelete}>X</button>
+      </td>
+    </>
   );
 
   //todo view when editing
